@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flaskr.models import Product, ProductSchema, product_schema, products_schema
 from flaskr import app,db,ma
 
+
 # GET ALL PRODUCTS
 @app.route('/product', methods=['GET'])
 def get_products():

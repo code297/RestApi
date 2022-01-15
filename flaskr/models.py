@@ -1,5 +1,6 @@
 from flaskr import db, ma
 
+
 # Class/Model 
 class Product(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -14,14 +15,14 @@ class Product(db.Model):
 		self.quantity = quantity
 		self.cost = cost
 
-	# def __repr__(self):
-	# 	return "Product Name: " + self.name
+	def __repr__(self):
+		return "Product Name: " + self.name
 
 
 # Product Schema
 class ProductSchema(ma.Schema):
 	class Meta:
-		fields = ( 'id', 'name', 'description' , 'quantity', 'cost')
+		fields = ( 'id', 'name', 'description', 'quantity', 'cost')
 
 
 # Init schema
